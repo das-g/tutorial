@@ -9,6 +9,7 @@
 # class
 
 # code editor
+Code editor is an application that allows you to save your code so you will be able to get back to it later. You can learn where to get one from the [Code editor chapter](./code_editor/README.md)
 
 # command
 A command is a line of text that is understood by your computer as an order that it has to execute.
