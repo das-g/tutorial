@@ -1,4 +1,11 @@
 # Bash console
+One of the console types available on [PythonAnywhere](#PythonAnywhere).
+It provides a command line interface to your PythonAnywhere account,
+just like CMD on Windows or the terminal on OS X and Linux
+provide a command line interface to your local computer.
+
+See the [Deploy! chapter](./deploy/#configuring-our-site-on-pythonanywhere)
+for how to access a bash console on PythonAnywhere.
 
 # byte
 
