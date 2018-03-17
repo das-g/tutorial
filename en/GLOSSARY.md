@@ -11,6 +11,13 @@ for how to access a bash console on PythonAnywhere.
 A unit of data / digital information. See article "byte" [on Wikipedia](https://en.wikipedia.org/wiki/byte).
 
 # Boolean
+(Short for "boolean value", named after [George Boole](https://en.wikipedia.org/wiki/George_Boole))
+a value that can only be true or false.
+In Python, the type `bool` is used for boolean values
+and the names of the values are `True` and `False`
+(with initial capital letters).
+
+See sections [Compare things](./python_introduction/#compare-things) and [Boolean](./python_introduction/#boolean) in the "Introduction to Python" chapter.
 
 # Bootstrap
 
