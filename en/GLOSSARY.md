@@ -20,6 +20,7 @@ and the names of the values are `True` and `False`
 See sections [Compare things](./python_introduction/#compare-things) and [Boolean](./python_introduction/#boolean) in the "Introduction to Python" chapter.
 
 # Bootstrap
+The front-end framework we use to [make our page pretty](./css).
 
 # class
 
