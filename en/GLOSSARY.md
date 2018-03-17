@@ -8,6 +8,7 @@ See the [Deploy! chapter](./deploy/#configuring-our-site-on-pythonanywhere)
 for how to access a bash console on PythonAnywhere.
 
 # byte
+A unit of data / digital information. See article "byte" [on Wikipedia](https://en.wikipedia.org/wiki/byte).
 
 # Boolean
 
