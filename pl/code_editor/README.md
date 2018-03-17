@@ -1,33 +1,11 @@
-# Edytor kodu
+# Edytor tekstu
 
-Zaraz napiszesz swoją pierwszą linijkę kodu, czas na zainstalowanie edytora tekstu!
+> Dla czytelniczek w domu: ten rozdział jest również omówiony w wideo [Installing Python & Code Editor](https://www.youtube.com/watch?v=pVTaqzKZCdA&t=4m43s).
 
-Tylko który wybrać? To nie takie proste, bo wybór zależy w dużej mierze od tego, co oczekujesz od swojego edytora. Większość programistów Pythona używa bardzo skomplikowanych i niezwykle bogatych w różne funkcjonalności IDE (z ang. zintegrowanych środowisk programistycznych - Integrated Development Environments), takich jak np. PyCharm. Jako osoba początkująca nie potrzebujesz jednak aż tak skomplikowanego edytora. Wystarczy coś prostszego, ale nadal dostatecznie użytecznego.
+Zaraz napiszesz swoją pierwszą linijkę kodu, więc najwyższy czas zainstalować edytor kodu!
 
-Poniżej znajdziesz nasze propozycje, ale jeżeli masz taką możliwość, możesz poprosić o rekomendację Twojego coacha -- będzie mu łatwiej pomagać Ci podczas warsztatów.
+> **Uwaga** Jeśli używasz już Chromebook, pomiń ten rozdział i upewnij się, że postąpiłeś zgodnie z instrukcją [Instalacja Chromebooka](../chromebook_setup/README.md).
+> 
+> **Uwaga** Jeśli zrobiłaś to już wcześniej w rozdziale 'Instalacja' - możesz przejść od razu do następnego rozdziału!
 
-## Gedit
-
-Gedit to open source'owy i darmowy edytor dostępny dla wszystkich systemów operacyjnych. Czasami nie jest jednak zbyt prosty w zainstalowaniu.
-
-[Pobierz tutaj][1]
-
- [1]: https://wiki.gnome.org/Apps/Gedit#Download
-
-## Sublime Text 2
-
-Sublime Text to bardzo popularny edytor z darmowym okresem testowania. Jest bardzo prosty do zainstalowania i używania, dostępny na wszystkie systemy operacyjne.
-
-[Pobierz tutaj][2]
-
- [2]: http://www.sublimetext.com/2
-
-## Atom
-
-Atom to nowy edytor kodu stworzony przez [GitHuba][3]. Jest darmowy, ma otwarte źródła, jest łatwy do zainstalowania i używania. Dostępny na Windowsa, OS X i Linuxa.
-
- [3]: http://github.com/
-
-[Pobierz tutaj][4]
-
- [4]: https://atom.io/
+{% include "/code_editor/instructions.md" %}

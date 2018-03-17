@@ -1,26 +1,44 @@
- {
+{
+    "gitbook": ">=3.2.0",
     "links": {
         "sidebar": {
             "Need help? Talk to us!": "https://gitter.im/DjangoGirls/tutorial"
         }
     },
-
+    "pdf": {
+        "fontSize": 16
+    },
     "plugins": [
-        "anchors@0.3.0", "ga@0.1.0", "richquotes@0.0.5", "edit-link@1.2.0"
+        "heading-anchors@1.0.3",
+        "ga@1.0.1",
+        "richquotes@0.0.9",
+        "github@2.0.0",
+        "language-picker",
+        "sidebar-ad",
+        "codeblock-label",
+        "sectionx"
     ],
-
     "pluginsConfig": {
         "ga": {
             "token": "UA-51680040-3"
         },
-        "richquotes" : {
-            "todos" : true
+        "richquotes": {
+            "default": false
         },
-        "edit-link": {
-            "base": "https://github.com/djangogirls/tutorial/edit/master",
-            "label": "Edit This Page"
+        "github": {
+            "url": "https://github.com/DjangoGirls/tutorial"
+        },
+        "language-picker": {
+            "grid-columns": 3
+        },
+        "sidebar-ad": {
+            "imageUrl": "https://c1.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,f_auto,h_440,w_704/v1512071903/g1gct4awp2llvhjtcgma.png",
+            "url": "https://www.generosity.com/community-fundraising/django-girls-fundraising-campaign/",
+            "description": "💖 Support our fund-raiser! ✨",
+            "btnText": "Donate!"
+        },
+        "sectionx": {
+            "tag": "b"
         }
-    },
-
-    "gitbook": "1.5.0"
+    }
 }

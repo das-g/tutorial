@@ -10,7 +10,7 @@ Format szablonów Django wykorzystuje język HTML (ten sam, o którym wspominali
 
 HTML to prosty kod interpretowany przez Twoją przeglarkę - taką jak Chrome, Firefox czy Safari - w celu wyświetlenia strony dla użytkownika.
 
-HTML to skrót od "HyperText Markup Language". **HyperText** oznacza typ tekstu, który umożliwia łączenie stron za pomocą łączy (hyperlinków, albo po prostu linków). **Markup** oznacza, że używamy tego kodu w dokumencie, żeby przekazać komuś informację (w naszym przypadku przeglądarce), jak zinterpretować daną stronę. Kod HTML składa się ze **znaczników ** (tagów), a każdy z nich zaczyna się od `<` i kończy na`>`. Za pomocą znaczników oznaczamy **elementy**.
+HTML to skrót od "HyperText Markup Language". **HyperText** oznacza, że jest to tekst, który wspiera hyperlinki - czyli po prostu linki między stronami. **Markup** oznacza, że używamy tego kodu w dokumencie, żeby przekazać komuś informacje (w naszym przypadku przeglądarce), jak zinterpretować daną stronę. Kod HTML składa się ze **znaczników ** (tagów), a każdy z nich zaczyna się od `<` i kończy na`>`. Za pomocą znaczników oznaczamy **elementy**.
 
 ## Twój pierwszy szablon!
 
@@ -21,7 +21,7 @@ Szablony są zapisywane w katalogu `blog/templates/blog`. Zacznij więc od stwor
     blog
     └───templates
         └───blog
-
+    
 
 (być może zastanawiasz się, dlaczego tworzymy dwa katalogi o nazwie `blog` - jak się niebawem dowiesz, to po prostu użyteczna konwencja nazewnictwa. Ułatwia życie, gdy sprawy stają się bardziej skomplikowane.)
 
@@ -29,7 +29,7 @@ A teraz stwórz plik `post_list.html` (na razie niech będzie pusty) wewnątrz k
 
 Popatrz, jak Twoja strona wygląda teraz: http://127.0.0.1:8000/
 
-> Jeżeli nadal otrzymujesz błąd `TemplateDoesNotExists`, spróbuj uruchomić serwer ponownie. Przejdź do wiersza poleceń, zatrzymaj serwer wciskając Ctrl+C (klawisze Control i C równocześnie), a następnie uruchom go jeszcze raz poleceniem `python manage.py runserver`.
+> Jeżeli nadal otrzymujesz błąd `TemplateDoesNotExist`, spróbuj uruchomić serwer ponownie. Przejdź do wiersza poleceń, zatrzymaj serwer wciskając Ctrl+C (klawisze Control i C równocześnie), a następnie uruchom go jeszcze raz poleceniem `python manage.py runserver`.
 
 ![Rysunek 11.1](images/step1.png)
 
@@ -37,43 +37,49 @@ Nie ma błędu! Gratulacje :) Niestety, twoja aplikacja nie wyświetla niczego p
 
 Dodaj następującą treść w pliku z szablonem:
 
-    <html>
-        <p>Hej!</p>
-        <p>Działa!</p>
-    </html>
+{% filename %}blog/templates/blog/post_list.html{% endfilename %}
 
+```html
+<html>
+    <p>Hi there!</p>
+    <p>It works!</p>
+</html>
+```
 
-I jak twoja strona wygląda teraz? Kliknij, żeby się dowiedzieć: http://127.0.0.1:8000/
+I jak twoja strona wygląda teraz? Odwiedź stronę http://127.0.0.1:8000/, żeby się dowiedzieć.
 
 ![Rysunek 11.2](images/step3.png)
 
 Zadziałało! Dobra robota :)
 
-*   Najbardziej podstawowy znacznik, `<html>`, jest zawsze na początku każdej strony internetowej, zaś `</html>` jest zawsze na końcu. Jak widzisz, cała zawartość strony zawiera się pomiędzy znacznikiem otwierającym `<html>` i zamykającym `</html>`
-*   `<p>` jest znacznikiem akapitów; `</p>` zamyka każdy akapit
+* Najbardziej podstawowy znacznik, `<html>`, jest zawsze na początku każdej strony internetowej, zaś `</html>` jest zawsze na końcu. Jak widzisz, cała zawartość strony zawiera się pomiędzy znacznikiem otwierającym `<html>` i zamykającym `</html>`
+* `<p>` jest znacznikiem akapitów; `</p>` zamyka każdy akapit
 
 ## Head i body
 
 Każda strona HTML jest podzielona na dwie części: **head** i **body**.
 
-*   **head** jest elementem zawierającym informacje o dokumencie, które nie są wyświetlane na ekranie.
+* **head** jest elementem zawierającym informacje o dokumencie, które nie są wyświetlane na ekranie.
 
-*   **body** zawiera wszystkie pozostałe elementy, które są częścią strony internetowej widoczną na ekranie.
+* **body** zawiera wszystkie pozostałe elementy, które są częścią strony internetowej widoczną na ekranie.
 
 Używamy znacznika `<head>`, aby poinformować przeglądarkę o konfiguracji strony oraz `<body>` do przekazania informacji o tym, co właściwie znajduje się na stronie.
 
 Przykładowo, element tytułu strony możesz umieścić wewnątrz `<head>`, o tak:
 
-    <html>
-        <head>
-            <title>Ola's blog</title>
-        </head>
-        <body>
-            <p>Hi there!</p>
-            <p>It works!</p>
-        </body>
-    </html>
+{% filename %}blog/templates/blog/post_list.html{% endfilename %}
 
+```html
+<html>
+    <head>
+        <title>Ola's blog</title>
+    </head>
+    <body>
+        <p>Hi there!</p>
+        <p>It works!</p>
+    </body>
+</html>
+```
 
 Zapisz plik i odśwież swoją stronę.
 
@@ -91,46 +97,50 @@ Musisz przestrzegać zasad *zamykania* znaczników i *zagnieżdżania* elementó
 
 Teraz nieco się pobawmy i spróbujmy dostosować nasz szablon! Oto kilka znaczników, które nam się do tego przydadzą:
 
-*   `<h1>Nagłówek</h1>` - dla najważniejszego nagłówka na Twojej stronie
-*   `<h2>Podtytuł</h2>` dla nagłówka niższego poziomu
-*   `<h3>Pod-podtytuł</h3>` ... i tak dalej, aż do `<h6>`
-*   `<em>tekst</em>` dodaje wyróżnienie twojego tekstu
-*   `<strong>text</strong>` jeszcze mocniej wyróżnia twój tekst
-*   `<br />` to przejście do nowej linii (wewnątrz br nie wstawiamy niczego)
-*   `<a href="http://djangogirls.org">link</a>` tworzy link
-*   `<ul><li>pierwsza pozycja</li><li>druga pozycja</li></ul>` tworzy listę, taką samą jak ta!
-*   `<div></div>` tworzy sekcję na stronie
+* `<h1>Tytuł</h1>` dla twojego najbardziej znaczącego nagłówka
+* `<h2>Podtytuł</h2>` dla nagłówka niższego poziomu
+* `<h3>pod-podtytuł</h3>` …i tak dalej aż do `<h6>`
+* `<p>akapit tekstu</p>`
+* `<em>tekst</em>` dodaje wyróżnienie twojego tekstu
+* `<strong>text</strong>` jeszcze mocniej wyróżnia twój tekst
+* `<br>` to przejście do nowej linii (wewnątrz br nie wstawiamy niczego i nie ma też znacznika zamykającego)
+* `<a href="https://djangogirls.org">link</a>` tworzy link
+* `<ul><li>pierwsza pozycja</li><li>druga pozycja</li></ul>` tworzy listę, taką samą jak ta!
+* `<div></div>` tworzy sekcję na stronie
 
-Poniżej przykład pełnego szablonu:
+Tutaj możesz zobaczyć przykład pełnego szablonu, skopiuj i wklej go do `blog/templates/blog/post_list.html`:
 
-    <html>
-        <head>
-            <title>Django Girls blog</title>
-        </head>
-        <body>
-            <div>
-                <h1><a href="">Django Girls Blog</a></h1>
-            </div>
+{% filename %}blog/templates/blog/post_list.html{% endfilename %}
 
-            <div>
-                <p>published: 14.06.2014, 12:14</p>
-                <h2><a href="">My first post</a></h2>
-                <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            </div>
+```html
+<html>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
 
-            <div>
-                <p>published: 14.06.2014, 12:14</p>
-                <h2><a href="">My second post</a></h2>
-                <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-            </div>
-        </body>
-    </html>
+        <div>
+            <p>published: 14.06.2014, 12:14</p>
+            <h2><a href="">My first post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        </div>
 
+        <div>
+            <p>published: 14.06.2014, 12:14</p>
+            <h2><a href="">My second post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+        </div>
+    </body>
+</html>
+```
 
 Stworzyliśmy tutaj trzy sekcje `div`.
 
-*   Pierwszy `div` zawiera tytuł naszego wpisu na blogu - tworzy go nagłówek wraz z linkiem
-*   Kolejne dwa elementy `div` zawierają nasze wpisy wraz z opublikowaną datą, `h2` z klikalnym tytułem wpisu oraz dwa elementy `p` (akapity) z tekstem, jeden z datą i drugi z treścią naszego wpisu.
+* Pierwszy `div` zawiera w sobie tytuł naszego bloga - jest to nagłówek i link
+* Kolejne dwa elementy `div` zawierają nasze wpisy wraz z opublikowaną datą, `h2` z klikalnym tytułem wpisu oraz dwa elementy `p` (akapity) z tekstem, jeden z datą i drugi z treścią naszego wpisu.
 
 Daje nam to taki efekt:
 
@@ -140,37 +150,66 @@ Hura! Ale jak do tej pory, nasz szablon wyświetla dokładnie **tą samą treś�
 
 Chcemy wyświetlić prawdziwe wpisy dodane w naszym panelu admina Django - i tym się teraz zajmiemy.
 
-## Jeszcze jedno
+## Jeszcze jedna rzecz: wdrożenie na serwer!
 
-Byłoby dobrze zobaczyć, czy Twoja strona będzie nadal dobrze działała na Heroku, prawda? Spróbujmy zaktualizować naszą stronę na serwerze.
+Byłoby fajnie, gdybyśmy mogli to wszystko zobaczyć "na żywo" w Internecie, a nie tylko u siebie w komputerze. Czas na wdrożenie na serwer PythonAnywhere:
 
-Po pierwsze, zobaczmy, jakie pliki zostały zmienione od ostatniej aktualizacji:
+### Zapisz zmiany w historii i wrzuć swój kod na GitHuba
+
+Po pierwsze, zobaczmy, jakie pliki zostały zmienione od ostatniej aktualizacji (wpisz następujące polecenie lokalnie w wierszu poleceń, nie na PythonAnywhere):
+
+{% filename %}command-line{% endfilename %}
 
     $ git status
+    
 
+Upewnij się, że jesteś w folderze `djangogirls` i powiedz `git`owi aby dodał wszystkie zmiany z aktualnego folderu:
 
-Teraz powiedzmy `git`owi aby dodał wszystkie zmiany z aktualnego folderu:
+{% filename %}command-line{% endfilename %}
 
-    $ git add -A .
+    $ git add --all .
+    
 
-
-> **Uwaga:** `-A` (skrót od "all", czyli "wszystko") oznacza, że `git` weźmie pod uwagę pliki, które usunęłaś (domyślnie rozpoznaje zmiany tylko w nowych lub już istniejących plikach). Pamiętaj również (vide rozdział 3), że `.` oznacza aktualny katalog.
+> **Uwaga:** `--all` (czyli "wszystko") oznacza, że `git` weźmie pod uwagę pliki, które usunęłaś (domyślnie rozpoznaje zmiany tylko w nowych lub już istniejących plikach). Pamiętaj również (vide rozdział 3), że `.` oznacza aktualny katalog.
 
 Zanim prześlemy wszystkie pliki, sprawdźmy, co faktycznie `git` zamierza przesłać (wszystkie pliki, które `git` prześle do repozytorium, powinny być zaznaczone na zielono):
 
-    $ git status
+{% filename %}command-line{% endfilename %}
 
+    $ git status
+    
 
 Już blisko do końca. Teraz czas poprosić gita, aby zapisał te zmiany w historii. Dodamy za moment informację o zmianach (ang. "commit message"), gdzie opiszemy, co zostało zmienione. Możesz w tym miejscu wpisać cokolwiek zechcesz, ale warto jednak wpisać kilka słów opisujących, co robiłaś. W ten sposób łatwiej Ci będzie w przyszłości przypomnieć sobie, czego dotyczyły zapisane zmiany.
 
-    $ git commit -m "Zmieniony kod HTML na stronie."
+{% filename %}command-line{% endfilename %}
 
+    $ git commit -m "Zmieniony kod HTML na stronie."
+    
 
 > **Uwaga:** Nie zapomnij umieścić informacji o zmianach w cudzysłowie (" ").
 
-Gdy już to zrobimy, możemy wreszcie zapisać zmiany (zrobić tzw. push) na naszej stronie na Heroku:
+Jak już wszystko to zrobimy, możemy wysłać (push) nasze zmiany na Githuba:
 
-    $ git push heroku master
+{% filename %}command-line{% endfilename %}
 
+    $ git push
+    
 
-I to powinno wystarczyć! Gdy Heroku skończy, możesz śmiało odświeżyć swoją stronę w przeglądarce. Zmiany powinny być widoczne!
+### Prześlij nową wersję kodu do PythonAnywhere i ponownie załaduj swoją stronę
+
+* Otwórz [stronę konsol na PythonAnywhere](https://www.pythonanywhere.com/consoles/) i przejdź do swojej **Bash console** (czyli po polsku "konsoli Bash") albo otwórz nową. Wpisz do niej:
+
+{% filename %}command-line{% endfilename %}
+
+    $ cd ~/<your-pythonanywhere-username>.pythonanywhere.com
+    $ git pull
+    [...]
+    
+
+(Pamiętaj by podmienić `<your-pythonanywhere-username>` na twoją właściwą nazwę użytkownika PythonAnywhere, bez nawiasów ostrokątnych).
+
+I obserwuj jak Twój kod się ściąga. Jeśli chcesz sprawdzić czy już się pobrał, możesz przejść do zakładki **Files tab** i przeglądnąć swój kod na PythonAnywhere.
+
+* Na koniec przeskocz do zakładki [Web tab](https://www.pythonanywhere.com/web_app_setup/) i naciśnij **Reload**.
+
+I to powinno wystarczyć! Możesz śmiało odświeżyć swoją stronę w przeglądarce! Zmiany powinny być widoczne. :)
