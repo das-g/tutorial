@@ -62,7 +62,7 @@ and moving it to a publicly accessible computer (called a server) so that other 
 
 # dictionary
 A dictionary is a data structure in Python that contains keys and values, in pairs. You can find a value by the key but not vice versa. A dictionary is written with curly brackets. Here is an example of a dictionary:
-{'T-shirts': 4, 'Pants': 2, 'Socks': 216}
+`{'T-shirts': 4, 'Pants': 2, 'Socks': 216}`
 
 # directory
 
@@ -191,7 +191,7 @@ URL is a web address. You can see a URL every time you visit a website – it is
 # variable
 
 # virtualenv
-short for [virtual environment](#virtual-environment]
+short for [virtual environment](#virtual-environment)
 
 # virtual environment
 A virtual environment (also called a virtualenv) is	like a private box we can stuff	useful computer	code into for a	project
