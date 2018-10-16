@@ -31,11 +31,15 @@ Code editor is an application that allows you to save your code so you will be a
 A command is a line of text that is understood by your computer as an order that it has to execute.
 For all of the things like starting programms, copying documents etc. that you can do using the mouse, there also exists a command.
 Commands are usually typed in a special window (that is often black with white letters), that is called
-the commant line, terminal, command prompt or console.
+the [command line](#command-line), [terminal](#command-line), [command prompt](#command-line) or [console](#command-line).
 
 # Command Line
+Command line is a black window with white text that all hackers use! It is a text-based application for viewing, handling, and manipulating files on your computer. For example, in the DjangoGirls tutorial, we use the terminal to interact with [Git](#git), a version control system.
 
 # Command Prompt
+The place in the [command line](#command-line) waiting for your command.
+It looks something like `jane@janes-laptop:~$` on Linux or `C:\Users\jane>` on Windows.
+Command prompt may also be used as a synonym of the [command line](#command-line).
 
 # comment
 
@@ -50,12 +54,15 @@ the commant line, terminal, command prompt or console.
 # database
 
 # dependency
+A dependency is some other code that is required for your code to run. For example, your web application is based on the framework Django, and that means Django is among its dependencies.
 
 # deployment 
-Deployment is the process of taking the code that poweres your web application
+Deployment is the process of taking the code that powers your web application
 and moving it to a publicly accessible computer (called a server) so that other people can see it.
 
 # dictionary
+A dictionary is a data structure in Python that contains keys and values, in pairs. You can find a value by the key but not vice versa. A dictionary is written with curly brackets. Here is an example of a dictionary:
+{'T-shirts': 4, 'Pants': 2, 'Socks': 216}
 
 # directory
 
@@ -84,6 +91,8 @@ The framework defines a lot of usefull functions that you can just use out of th
 # function
 
 # git
+A 'version control system' used by a lot of programmers. It allows you to track changes in your files so you can recall specific versions later. It works a bit like the "track changes" feature in Microsoft Word, but it is much more powerful.
+Git uses [code repositories](#repository) to save changes to a particular set of files.
 
 # hacker
 
@@ -144,15 +153,17 @@ Python is a programming language. Like a normal language it has a specific vocab
 # regular expression
 
 # repo
+Another name for a [repository](#repository).
 
 # repository
+A repository, also called a [repo](#repo), is something that Git uses to track changes in a specific set of files. It is like a folder on the Internet with the ability to remember its previous versions.
 
 # run
 Commands and programms can be run. This means the same as to execute it.
 
 # server
 A server is a dedicated computer to hold websites and other things accessible over the internet. 
-Servers run web-apps and store the data that you put in the cloud
+Servers run web-apps and store the data that you put in the cloud.
 
 # shell
 
@@ -170,15 +181,17 @@ quotes tell Python that what's inside of them is a string.
 # template tag
 
 # terminal
+Another name for the [command line](#command-line).
 
 # URL
+URL is a web address. You can see a URL every time you visit a website – it is visible in your browser's address bar. Every page on the Internet needs its own URL. For example, https://djangogirls.org is a URL. And 127.0.0.1:8000 is also a URL!
 
 # urlresolver
 
 # variable
 
 # virtualenv
-short for virtual environment
+short for [virtual environment](#virtual-environment]
 
 # virtual environment
 A virtual environment (also called a virtualenv) is	like a private box we can stuff	useful computer	code into for a	project
