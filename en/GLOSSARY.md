@@ -90,7 +90,7 @@ The framework defines a lot of usefull functions that you can just use out of th
 
 # function
 
-# git
+# Git
 A 'version control system' used by a lot of programmers. It allows you to track changes in your files so you can recall specific versions later. It works a bit like the "track changes" feature in Microsoft Word, but it is much more powerful.
 Git uses [code repositories](#repository) to save changes to a particular set of files.
 
