@@ -23,6 +23,7 @@ See sections [Compare things](./python_introduction/#compare-things) and [Boolea
 The front-end framework we use to [make our page pretty](./css).
 
 # class
+In object-oriented programming, a class is an extensible program-code-template for creating objects. It defines a set of properties & methods that are common to all objects of one type.
 
 # code editor
 Code editor is an application that allows you to save your code so you will be able to get back to it later. You can learn where to get one from the [Code editor chapter](./code_editor/README.md)
