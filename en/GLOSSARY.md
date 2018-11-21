@@ -43,6 +43,7 @@ It looks something like `jane@janes-laptop:~$` on Linux or `C:\Users\jane>` on W
 Command prompt may also be used as a synonym of the [command line](#command-line).
 
 # comment
+Comment: A comment may appear at the start of a line or following whitespace or code, but not within a string literal.They clarify code and are not interpreted by Python. They can be represented by using '#' before the text.
 
 # compiler
 
