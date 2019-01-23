@@ -7,7 +7,7 @@ tutorial](http://django-marcador.keimlink.de/) licensed under the Creative Commo
 Attribution-ShareAlike 4.0 International License. The django-marcador tutorial
 is copyrighted by Markus Zapke-Gründemann et al.
 
-We're going to create a simple blog!
+We're going to create a small blog!
 
 The first step is to start a new Django project. Basically, this means that we'll run some scripts provided by Django that will create the skeleton of a Django project for us. This is just a bunch of directories and files that we will use later.
 
@@ -42,8 +42,8 @@ On Windows you should run the following command. **(Don't forget to add the peri
 ```
 > The period `.` is crucial because it tells the script to install Django in your current directory (for which the period `.` is a short-hand reference).
 
-> **Note** When typing the command above, remember that you only type the part which starts by `django-admin.py`.
-The (myvenv) C:\Users\Name\djangogirls>` part shown here is just example of the prompt that will be inviting your input on your command line.
+> **Note** When typing the command above, remember that you only type the part which starts by `django-admin.exe`.
+The `(myvenv) C:\Users\Name\djangogirls>` part shown here is just example of the prompt that will be inviting your input on your command line.
 
 <!--endsec-->
 
@@ -52,11 +52,12 @@ The (myvenv) C:\Users\Name\djangogirls>` part shown here is just example of the 
 ```
 djangogirls
 ├───manage.py
-└───mysite
-        settings.py
-        urls.py
-        wsgi.py
-        __init__.py
+├───mysite
+│        settings.py
+│        urls.py
+│        wsgi.py
+│        __init__.py
+└───requirements.txt
 ```
 > **Note**: in your directory structure, you will also see your `venv` directory that we created before.
 
@@ -84,9 +85,9 @@ In `settings.py`, find the line that contains `TIME_ZONE` and modify it to choos
 TIME_ZONE = 'Europe/Berlin'
 ```
 
-A language code consist of the language, e.g. `en` for english or `de` for german, and the country code, e.g. `de` for germany or `ch` for switzerland. You will want to add this if you want the default buttons and notifications from Django to be in your language. So you would have "Cancel" button translated into the language you defined here. [Django comes with a lot of prepared translations](https://docs.djangoproject.com/en/1.11/ref/settings/#language-code).
+A language code consist of the language, e.g. `en` for English or `de` for German, and the country code, e.g. `de` for Germany or `ch` for Switzerland. If English is not your native language, you can add this to change the default buttons and notifications from Django to be in your language. So you would have "Cancel" button translated into the language you defined here. [Django comes with a lot of prepared translations](https://docs.djangoproject.com/en/2.0/ref/settings/#language-code).
 
-Change the language code by changing the following line:
+If you want a different language, change the language code by changing the following line:
 
 {% filename %}mysite/settings.py{% endfilename %}
 ```python
@@ -107,13 +108,13 @@ match our hostname on PythonAnywhere once we deploy our application so we will c
 
 {% filename %}mysite/settings.py{% endfilename %}
 ```python
-ALLOWED_HOSTS = ['127.0.0.1', '<your_username>.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 ```
 
 > **Note**: If you're using a Chromebook, add this line at the bottom of your settings.py file:
 > `MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'`
 
-> Also add `django-girls-<your_username>.c9users.io` to the ALLOWED_HOSTS if you are using cloud9
+> Also add `.amazonaws.com` to the `ALLOWED_HOSTS` if you are using cloud9
 
 ## Set up a database
 
@@ -151,6 +152,8 @@ Running migrations:
   Applying auth.0005_alter_user_last_login_null... OK
   Applying auth.0006_require_contenttypes_0002... OK
   Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
   Applying sessions.0001_initial... OK
 ```
 
@@ -180,28 +183,28 @@ If you are on Windows and this fails with `UnicodeDecodeError`, use this command
 ```
 
 
-Now all you need to do is check that your website is running. Open your browser (Firefox, Chrome, Safari, Internet Explorer or whatever you use) and enter this address:
+Now you need to check that your website is running. Open your browser (Firefox, Chrome, Safari, Internet Explorer or whatever you use) and enter this address:
 
 {% filename %}browser{% endfilename %}
 ```
 http://127.0.0.1:8000/
 ```
 
-If you're using a Chromebook, you'll always visit your test server by accessing:
+If you're using a Chromebook and Cloud9, instead click the URL in the pop-up window that should have appeared in the upper right corner of the command window where the web server is running. The URL will look something like:
 
 {% filename %}browser{% endfilename %}
 ```
-https://django-girls-<your cloud9 username>.c9users.io
+https://<a bunch of letters and numbers>.vfs.cloud9.us-west-2.amazonaws.com
 ```
 
 Congratulations! You've just created your first website and run it using a web server! Isn't that awesome?
 
-![It worked!](images/it_worked2.png)
+![Install worked!](images/install_worked.png)
 
-While the web server is running, you won't see a new command-line prompt to enter additional commands. The terminal will accept new text but will not execute new commands. This is because the web server continuously runs in order to listen for incoming requests.
+Note that a command window can only run one thing at a time, and the command window you opened earlier is running the web server. As long as the web server is running and waiting for additional incoming requests, the terminal will accept new text but will not execute new commands.
 
 > We reviewed how web servers work in the <b>How the Internet works</b> chapter.
 
-To type additional commands while the web server is running, open a new terminal window and activate your virtualenv. To stop the web server, switch back to the window in which it's running and press CTRL+C - Control and C keys together (on Windows, you might have to press Ctrl+Break).
+To type additional commands while the web server is running, open a new terminal window and activate your virtualenv -- to review instructions on how to open a second terminal window, see [Introduction to the command line](../intro_to_command_line/README.md). To stop the web server, switch back to the window in which it's running and press CTRL+C - Control and C keys together (on Windows, you might have to press Ctrl+Break).
 
 Ready for the next step? It's time to create some content!

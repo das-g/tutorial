@@ -64,7 +64,7 @@ published_date
 
 ### Создание приложения
 
-Для аккуратности мы создадим отдельное приложение в нашем проекте. Очень удобно иметь хорошо организованное рабочее место с самого начала. Для создания приложения нам понадобиться набрать следующую инструкцию в командной строке (из директории `djangogirls`, где находится файл `manage.py`):
+Для аккуратности мы создадим отдельное приложение в нашем проекте. Очень удобно иметь хорошо организованное рабочее место с самого начала. Для создания приложения нам понадобится набрать следующую инструкцию в командной строке (из директории `djangogirls`, где находится файл `manage.py`):
 
 {% filename %}command-line{% endfilename %}
 ```
@@ -123,7 +123,7 @@ from django.utils import timezone
 
 
 class Post(models.Model):
-    author = models.ForeignKey('auth.User')
+    author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     text = models.TextField()
     created_date = models.DateTimeField(

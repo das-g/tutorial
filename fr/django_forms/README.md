@@ -53,7 +53,7 @@ Remarquez que notre nouvelle vue s'appelle `post_new`.
 Après avoir ajouté cette ligne, votre fichier html devrait maintenant ressembler à ceci :
 
 ```html
-{% load staticfiles %}
+{% load static %}
 <html>
     <head>
         <title>Django Girls blog</title>
@@ -368,7 +368,7 @@ Comme vous êtes probablement connectée, vous ne verrez aucune différence si v
 
 Nos modifications fonctionnent-elles sur PythonAnywhere ? Pour le savoir, déployons à nouveau !
 
-*   Tout d'abord, commitez votre nouveau code et pushez-le à nouveau sur Github
+*   Tout d'abord, commitez votre nouveau code et pushez-le à nouveau sur GitHub
 ```
     $ git status
     $ git add --all .

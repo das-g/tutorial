@@ -57,7 +57,7 @@ class PostForm(forms.ModelForm):
 
 {% filename %}blog/templates/blog/base.html{% endfilename %}
 ```html
-{% load staticfiles %}
+{% load static %}
 <html>
     <head>
         <title>Django Girls blog</title>
@@ -410,7 +410,7 @@ form = PostForm(instance=post)
 
 Теперь давай посмотрим, как это будет работать на PythonAnywhere. Пришло время для очередного развёртывания!
 
-*   Сначала нам нужно сделать commit и push нового кода в репозиторий Github
+*   Сначала нам нужно сделать commit и push нового кода в репозиторий GitHub
 
 {% filename %}command-line{% endfilename %}
 ```

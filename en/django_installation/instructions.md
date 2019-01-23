@@ -12,9 +12,9 @@ Before we install Django we will get you to install an extremely useful tool to 
 
 So, let's create a **virtual environment** (also called a *virtualenv*). Virtualenv will isolate your Python/Django setup on a per-project basis. This means that any changes you make to one website won't affect any others you're also developing. Neat, right?
 
-All you need to do is find a directory in which you want to create the `virtualenv`; your home directory, for example. On Windows it might look like `C:\Users\Name\` (where `Name` is the name of your login).
+All you need to do is find a directory in which you want to create the `virtualenv`; your home directory, for example. On Windows, it might look like `C:\Users\Name\` (where `Name` is the name of your login).
 
-> __NOTE:__ On Windows, make sure that this directory does not contain accented or special characters; if your username contains accented characters, use a different directory, for example `C:\djangogirls`.
+> __NOTE:__ On Windows, make sure that this directory does not contain accented or special characters; if your username contains accented characters, use a different directory, for example, `C:\djangogirls`.
 
 For this tutorial we will be using a new directory `djangogirls` from your home directory:
 
@@ -48,7 +48,7 @@ Where `myvenv` is the name of your `virtualenv`. You can use any other name, but
 <!--sec data-title="Virtual environment: Linux and OS X" data-id="virtualenv_installation_linuxosx"
 data-collapse=true ces-->
 
-Creating a `virtualenv` on both Linux and OS X is as simple as running `python3 -m venv myvenv`.
+We can create a `virtualenv` on both Linux and OS X by running `python3 -m venv myvenv`.
 It will look like this:
 
 {% filename %}command-line{% endfilename %}
@@ -56,21 +56,21 @@ It will look like this:
 $ python3 -m venv myvenv
 ```
 
-`myvenv` is the name of your `virtualenv`. You can use any other name, but stick to lowercase and use no spaces. It is also good idea to keep the name short as you'll be referencing it a lot!
+`myvenv` is the name of your `virtualenv`. You can use any other name, but stick to lowercase and use no spaces. It is also a good idea to keep the name short as you'll be referencing it a lot!
 
 > __NOTE:__ On some versions of Debian/Ubuntu you may receive the following error:
 
 >{% filename %}command-line{% endfilename %}
 >```
 >The virtual environment was not created successfully because ensurepip is not available.  On Debian/Ubuntu systems, you need to install the python3-venv package using the following command.
->    apt-get install python3-venv
+>    apt install python3-venv
 >You may need to use sudo with that command.  After installing the python3-venv package, recreate your virtual environment.
 >```
 >
 > In this case, follow the instructions above and install the `python3-venv` package:
 >{% filename %}command-line{% endfilename %}
 >```
->$ sudo apt-get install python3-venv
+>$ sudo apt install python3-venv
 >```
 
 > __NOTE:__ On some versions of Debian/Ubuntu initiating the virtual environment like this currently gives the following error:
@@ -84,7 +84,7 @@ $ python3 -m venv myvenv
 
 >{% filename %}command-line{% endfilename %}
 >```
->$ sudo apt-get install python-virtualenv
+>$ sudo apt install python-virtualenv
 >$ virtualenv --python=python3.6 myvenv
 >```
 
@@ -164,18 +164,37 @@ Before we do that, we should make sure we have the latest version of `pip`, the 
 
 {% filename %}command-line{% endfilename %}
 ```
-(myvenv) ~$ pip install --upgrade pip
+(myvenv) ~$ python -m pip install --upgrade pip
 ```
 
-Then run `pip install django~=1.11.0` (note that we use a tilde followed by an equal sign: `~=`) to install Django.
+### Installing packages with requirements
+
+A requirements file keeps a list of dependencies to be installed using
+`pip install`:
+
+First create a `requirements.txt` file inside of the `djangogirls/` folder, using the code editor that you installed earlier. You do this by opening a new file in the code editor and then saving it as `requirements.txt` in the `djangogirls/` folder. Your directory will look like this:
+
+```
+djangogirls
+└───requirements.txt
+```
+
+In your `djangogirls/requirements.txt` file you should add the following text:
+
+{% filename %}djangogirls/requirements.txt{% endfilename %}
+```
+Django~={{ book.django_version }}
+```
+
+Now, run `pip install -r requirements.txt` to install Django.
 
 {% filename %}command-line{% endfilename %}
 ```
-(myvenv) ~$ pip install django~=1.11.0
-Collecting django~=1.11.0
-  Downloading Django-1.11.3-py2.py3-none-any.whl (6.8MB)
-Installing collected packages: django
-Successfully installed django-1.11.3
+(myvenv) ~$ pip install -r requirements.txt
+Collecting Django~={{ book.django_version }} (from -r requirements.txt (line 1))
+  Downloading Django-{{ book.django_version }}-py3-none-any.whl (7.1MB)
+Installing collected packages: Django
+Successfully installed Django-{{ book.django_version }}
 ```
 
 <!--sec data-title="Installing Django: Windows" data-id="django_err_windows"
@@ -192,7 +211,7 @@ data-collapse=true ces-->
 >
 >{% filename %}command-line{% endfilename %}
 >```
->C:\Users\Name\djangogirls> python -m pip install django~=1.11.0
+>C:\Users\Name\djangogirls> python -m pip install -r requirements.txt
 >```
 
 <!--endsec-->
