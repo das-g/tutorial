@@ -4,13 +4,13 @@ Diese Anleitung basiert auf dem Django Girls Tutorial: https://tutorial.djangogi
 
 ## Willkommen
 
-Willkommen beim Django Girls Tutorial! Wir freuen uns, dass du hier bist :) In diesem Tutorial schauen wir gemeinsam unter die Haube der Technologien im Internet, geben dir einen Einblick in die Bits und Bytes, die zusammen das Internet bilden, wie wir es heute kennen.
+Willkommen beim informatics4girls-Workshop "Blog-Software programmieren"! Wir freuen uns, dass du hier bist :) In diesem Tutorial schauen wir gemeinsam unter die Haube der Technologien im Internet, geben dir einen Einblick in die Bits und Bytes, die zusammen das Internet bilden, wie wir es heute kennen.
 
 Wie alles Unbekannte wird das ein Abenteuer sein - aber keine Sorge: Da du bereits den Mut aufgebracht hast, hier zu sein, wirst du das schon meistern :)
 
 ## Einleitung
 
-Hattest du auch schon einmal das Gefühl, dass Technik in der Welt immer wichtiger wird und du da nicht ganz mithalten kannst? Wolltest du schon immer einmal eine Website bauen, aber hattest dann nicht genug Motivation, damit anzufangen? Hast du dir irgendwann schon einmal gedacht, dass die Computerwelt zu kompliziert für dich ist, so dass du noch nicht einmal den Versuch unternommen hast, dort selbst etwas zu tun?
+Willst du wissen, wie Programme und Web-Applikationen entstehen, und willst du selbst eine bauen?
 
 Dann haben wir hier gute Neuigkeiten für dich! Programmieren ist nicht so schwer, wie du denkst und wir zeigen dir hier, wie viel Spaß es machen kann.
 
@@ -26,22 +26,14 @@ Es wird (in etwa) so aussehen:
 
 ![Abbildung 0.1](images/application.png)
 
-Okay, [lass uns ganz am Anfang starten...](./how_the_internet_works/README.md)
-
 ## Das Tutorial daheim durcharbeiten
 
-An einem Django-Girls-Workshop teilzunehmen ist toll, aber uns ist klar, dass das nicht immer allen möglich ist. Darum wollen wir dich ermutigen, das Tutorial auch zu Hause zu erarbeiten. Für Leser zu Hause erstellen wir gerade Video-Tutorials, die es erleichtern sollen, diesem Tutorial zu folgen. Diese Arbeit ist noch nicht abgeschlossen, aber mehr und mehr Themen werden als Video erfasst und können im [Coding is for girls](https://www.youtube.com/channel/UC0hNd2uW8jTR5K3KBzRuG2A/feed)-YouTube-Kanal angesehen werden.
+Beim informatics4girls-Workshop arbeitet ihr auf Computern,
+auf denen die benötigte Software schon drauf ist.
+Daher wurden in dieser Druck-Ausgabe des Tutorials
+die entsprechenden Installations-Anleitungen weggelassen.
 
-In jedem Kapitel, das bereits mit Video unterstützt wird, gibt es einen Link auf das jeweilige Video dazu.
-
-## Über uns und wie du mithelfen kannst
-
-Dieses Tutorial wird von [DjangoGirls](https://djangogirls.org/) betreut. Solltest du Fehler finden oder das Tutorial aktualisieren wollen, dann folge den [Richtlinien zum Mitarbeiten](https://github.com/DjangoGirls/tutorial/blob/master/CONTRIBUTING.md).
-
-## Möchtest du uns helfen, das Tutorial in andere Sprachen zu übersetzen?
-
-Zur Zeit haben wir die Übersetzungen auf der crowdin.com Plattform:
-
-https://crowdin.com/project/django-girls-tutorial
-
-Sollte deine Sprache nicht aufgeführt sein, dann öffne ein neues [Issue](https://github.com/DjangoGirls/tutorial/issues/new), mit der betreffenden Sprache, dann können wir sie hinzufügen.
+Falls du zuhause am Tutorial arbeiten willst,
+verwende daher die Online-Version auf
+https://tutorial.djangogirls.org/,
+die dich durch alle notwendigen Installationen führt.

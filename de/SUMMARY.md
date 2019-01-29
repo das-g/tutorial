@@ -1,8 +1,6 @@
 # Zusammenfassung
 
 * [Einleitung](README.md)
-* [Installation](installation/README.md)
-* [Installation (Chromebook)](chromebook_setup/README.md)
 * [Wie das Internet funktioniert](how_the_internet_works/README.md)
 * [Einführung in die Kommandozeile](intro_to_command_line/README.md)
 * [Python-Installation](python_installation/README.md)
