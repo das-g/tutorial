@@ -1,4 +1,4 @@
-# Django Girls Tutorial
+Diese Anleitung basiert auf dem Django Girls Tutorial: https://tutorial.djangogirls.org/
 
 [![Gitter](https://badges.gitter.im/DjangoGirls/tutorial.svg)](https://gitter.im/DjangoGirls/tutorial)
 
