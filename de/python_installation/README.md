@@ -8,8 +8,8 @@ Python entstand in den späten 1980ern mit dem Hauptziel, von Menschen lesbar zu
 
 # Python-Installation
 
-> **Hinweis** Wenn du ein Chromebook verwendest, überspringe bitte dieses Kapitel und folge den Anweisungen im Kapitel [Chromebook Installation](../chromebook_setup/README.md).
+> **Hinweis** Auf den Computern im PC-Labor ist Python bereits installiert.
 > 
-> **Hinweis:** Wenn du die Installation bereits hinter dir hast, gibt es keinen Grund dies erneut zu tun - du kannst direkt zum nächsten Kapitel springen!
-
-{% include "/python_installation/instructions.md" %}
+> Falls du das Tutorial zuhause bearbeitest,
+> folge der Anleitung auf
+> https://tutorial.djangogirls.org/de/python_installation/

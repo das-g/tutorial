@@ -1,9 +1,5 @@
 # Dein erstes Django-Projekt!
 
-> Ein Teil dieses Kapitels basiert auf Tutorials der Geek Girls Carrots (https://github.com/ggcarrots/django-carrots).
-> 
-> Teile dieses Kapitels basieren auf dem [django-marcador Tutorial](http://django-marcador.keimlink.de/) lizenziert unter Creative Commons Attribution-ShareAlike 4.0 International License. Für das "django-marcador Tutorial" liegt das Urheberrecht bei Markus Zapke-Gründemann et al.
-
 Wir werden einen kleinen Blog erstellen!
 
 Der erste Schritt ist, ein neues Django-Projekt zu starten. Im Grunde bedeutet das, dass wir einige Skripte ausführen werden, die Django zur Verfügung stellt, um ein Skelett eines Django-Projekts für uns zu erzeugen. Das Projekt beinhaltet einen Haufen von Verzeichnissen und Dateien, die wir später verwenden werden.
@@ -24,21 +20,6 @@ In deiner OS X- oder Linux-Konsole solltest du den folgenden Befehl ausführen; 
 > Der Punkt `.` ist sehr wichtig, weil er dem Skript mitteilt, dass Django in deinem aktuellen Verzeichnis installiert werden soll. (Der Punkt `.` ist eine Schnellreferenz dafür.)
 > 
 > **Hinweis:** Wenn du das oben angegebene Kommando eingibst, denk daran, nur das einzutippen, was mit `django-admin` anfängt. Der `(myvenv) ~/djangogirls$`-Teil hier ist nur ein Beispiel für die Eingabeaufforderung (den "Prompt") auf der Kommandozeile.
-
-<!--endsec-->
-
-<!--sec data-title="Create project: Windows" data-id="django_start_project_windows" data-collapse=true ces-->
-
-Auf Windows solltest du den folgenden Befehl ausführen. **(Vergiss den Punkt (`.`) am Ende nicht!)**:
-
-{% filename %}command-line{% endfilename %}
-
-    (myvenv) C:\Users\Name\djangogirls> django-admin.exe startproject mysite .
-    
-
-> Der Punkt `.` ist sehr wichtig, weil er dem Skript mitteilt, dass Django in deinem aktuellen Verzeichnis installiert werden soll. (Der Punkt `.` ist eine Schnellreferenz dafür.)
-> 
-> **Hinweis:** Wenn du das oben angegebene Kommando eingibst, denk daran, nur das einzutippen, was mit `django-admin.exe` anfängt. Der `(myvenv) C:\Users\Name\djangogirls>`-Teil hier ist nur ein Beispiel für die Eingabeaufforderung (den "Prompt") auf der Kommandozeile.
 
 <!--endsec-->
 
@@ -107,10 +88,6 @@ Wenn `DEBUG` auf `True` gesetzt ist und `ALLOWED_HOSTS` leer, dann wird der "Hos
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 ```
 
-> **Hinweis**: Wenn du ein Chromebook verwendest, füge noch diese Zeile am Ende deiner settings.py-Datei hinzu: `MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'`
-> 
-> Falls du Cloud9 benutzt, füge auch `.amazonaws.com` zu den `ALLOWED_HOSTS` hinzu
-
 ## Eine Datenbank erstellen
 
 Es gibt viele verschiedene Datenbank Programme, welche die Daten unserer Website verwalten können. Wir werden die Standard-Datenbanksoftware nehmen, `sqlite3`.
@@ -164,35 +141,12 @@ Kontrolliere, dass du in dem Verzeichnis bist, in dem die `manage.py`-Datei lieg
     (myvenv) ~/djangogirls$ python manage.py runserver
     
 
-Wenn du ein Chromebook verwendest, benutze stattdessen diesen Befehl:
-
-{% filename %}Cloud 9{% endfilename %}
-
-    (myvenv) ~/djangogirls$ python manage.py runserver 0.0.0.0:8080
-    
-
-Wenn du Windows benutzt und dies mit dem `UnicodeDecodeError` fehlschläft, verwende diesen Befehl:
-
-{% filename %}command-line{% endfilename %}
-
-    (myvenv) ~/djangogirls$ python manage.py runserver 0:8000
-    
-
 Jetzt wollen wir schauen, ob unsere Website funktioniert: Öffne deinen Browser (Firefox, Chrome, Safari, Edge oder was du sonst nutzt) und gib diese Adresse ein:
 
 {% filename %}browser{% endfilename %}
 
     http://127.0.0.1:8000/
     
-
-Wenn du ein Chromebook und Cloud9 verwendest, dann klicke stattdessen die URL im erschienenen Fenster in der oberen rechten Ecke des Kommandozeilenfensters, in dem der Webserver läuft. Die URL sollte etwa so aussehen:
-
-{% filename %}browser{% endfilename %}
-
-    https://<a bunch of letters and numbers>.vfs.cloud9.us-west-2.amazonaws.com
-    
-
-Glückwunsch! Du hast gerade deine erste Website erstellt und sie auf deinem Webserver laufen! Ist das nicht toll?
 
 ![Installation hat funktioniert!](images/install_worked.png)
 

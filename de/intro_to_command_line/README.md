@@ -1,6 +1,14 @@
 # Einführung in die Kommandozeile
 
-> Für die Leser zu Hause: Dieses Kapitel wird im Video [Your new friend: Command Line](https://www.youtube.com/watch?v=jvZLWhkzX-8) behandelt.
+> **Hinweis:** Im informatics4girls-Workshop verwenden wir Linux.
+> Die Anleitungen für Windows und Mac wurden
+> in dieser Druckversion
+> daher weggelassen.
+> Falls du zuhause daran arbeitst,
+> verwende die online-Version auf
+> https://tutorial.djangogirls.org/de/intro_to_command_line/,
+> die auch für diese Betriebssysteme
+> alle Informationen enthält.
 
 Aufregend, oder?! In ein paar Minuten wirst du deine erste Zeile Code schreiben! :)
 
@@ -16,13 +24,13 @@ Das Fenster, welches gewöhnlich die **Kommandokonsole** (command line) oder **K
 
 ## Öffnen der Konsole
 
-Um mit ein paar Experimenten zu beginnen, müssen wir erstmal die Kommandozeile öffnen. {% include "/intro_to_command_line/open_instructions.md" %}
+Um mit ein paar Experimenten zu beginnen, müssen wir erstmal die Kommandozeile öffnen.
+
+Auf den Computern im PC-Labor geht das mit dem Terminal-Schnellstart-Knopf links.
 
 ## Eingabeaufforderung (Prompt)
 
 Du solltest nun ein weißes oder schwarzes Fenster sehen, das auf deine Anweisungen wartet.
-
-<!--sec data-title="Prompt: OS X and Linux" data-id="OSX_Linux_prompt" data-collapse=true ces-->
 
 Auf einem Mac- oder Linux-Rechner siehst du wahrscheinlich ein `$`, also so:
 
@@ -30,22 +38,6 @@ Auf einem Mac- oder Linux-Rechner siehst du wahrscheinlich ein `$`, also so:
 
     $
     
-
-<!--endsec-->
-
-<!--sec data-title="Prompt: Windows" data-id="windows_prompt2" data-collapse=true ces-->
-
-Auf einem Windows-Rechner siehst du wahrscheinlich ein `>`, so hier:
-
-{% filename %}command-line{% endfilename %}
-
-    >
-    
-
-Schau 'mal in den Linux-Abschnitt hier obendrüber -- so etwas wirst du wieder im Abschnitt PythonAnywhere später im Tutorial antreffen.
-
-<!--endsec-->
-
 Vor jedem Kommando wird das Zeichen `$` oder `>` und ein Leerzeichen vorangestellt, aber du musst das nicht hinschreiben. Dein Computer macht das für dich. :)
 
 > Ein kleiner Hinweis: Falls du etwas in der Art wie `C:\Users\ola>` oder `Olas-MacBook-Air:~ ola$` sehen solltest, ist das auch 100%ig korrekt.
@@ -58,24 +50,10 @@ Wenn wir im Tutorial wollen, dass du einen Befehl eingibst, schreiben wir `$` od
 
 Lass uns mit diesem Kommando beginnen:
 
-<!--sec data-title="Your first command: OS X and Linux" data-id="OSX_Linux_whoami" data-collapse=true ces-->
-
 {% filename %}command-line{% endfilename %}
 
     $ whoami
     
-
-<!--endsec-->
-
-<!--sec data-title="Your first command: Windows" data-id="windows_whoami" data-collapse=true ces-->
-
-{% filename %}command-line{% endfilename %}
-
-    > whoami
-    
-
-<!--endsec-->
-
 Und dann bestätige mit `Enter`. Das ist unser Ergebnis:
 
 {% filename %}command-line{% endfilename %}
@@ -96,8 +74,6 @@ Jedes Betriebssystem hat einen geringfügig anderen Bestand an Befehlen für die
 
 Es wäre schön zu sehen, wo wir uns befinden, oder? Lass uns nachsehen. Gib diesen Befehl in die Konsole ein und bestätige ihn mit `Enter`:
 
-<!--sec data-title="Current directory: OS X and Linux" data-id="OSX_Linux_pwd" data-collapse=true ces-->
-
 {% filename %}command-line{% endfilename %}
 
     $ pwd
@@ -105,20 +81,6 @@ Es wäre schön zu sehen, wo wir uns befinden, oder? Lass uns nachsehen. Gib die
     
 
 > Hinweis: 'pwd' steht für 'print working directory' (zeige derzeitiges Arbeitsverzeichnis).
-
-<!--endsec-->
-
-<!--sec data-title="Current directory: Windows" data-id="windows_cd" data-collapse=true ces-->
-
-{% filename %}command-line{% endfilename %}
-
-    > cd
-    C:\Users\olasitarska
-    
-
-> Hinweis: "cd" steht für "change directory". Mit Powershell kannst du auch 'pwd' verwenden, wie auf Linux oder Mac OS X.
-
-<!--endsec-->
 
 Du wirst wahrscheinlich etwas Ähnliches auf deinem Gerät sehen. Wenn du die Konsole öffnest, befindest du dich normalerweise im Heimverzeichnis deines Benutzers.
 
@@ -131,12 +93,6 @@ Viele Befehle, die du in der Kommandozeile nutzen kannst, haben eine eingebaute 
 <!--sec data-title="Command help: OS X and Linux" data-id="OSX_Linux_man" data-collapse=true ces-->
 
 OS X und Linux haben einen `man`-Befehl, mit dem du die Hilfe über die Kommandos aufrufen kannst. Gib `man pwd` ein und schau, was angezeigt wird oder setzte `man` vor andere Kommandos und sieh dir deren Hilfe an. Das Ergebnis von `man` wird in der Regel seitenweise ausgegeben. Du kannst die Leertaste benutzen, um auf die nächste Seite zu gelangen und `q` (für engl. "quit", was "verlassen"/"rausgehen" heisst), um die Hilfeseiten zu schließen.
-
-<!--endsec-->
-
-<!--sec data-title="Current directory: Windows" data-id="windows_help" data-collapse=true ces-->
-
-Wenn du Windows benutzt, dann wird dir der Suffix `/?` für die meisten Kommandos die Hilfeseite ausgeben. Gegebenenfalls musst du nach oben scrollen, um alles zu sehen. Versuch es mal mit `cd /?`.
 
 <!--endsec-->
 
@@ -158,34 +114,11 @@ Nun, was befindet sich in deinem Verzeichnis? Es wäre toll, das herauszufinden.
 
 <!--endsec-->
 
-<!--sec data-title="List files and directories: Windows" data-id="windows_dir" data-collapse=true ces-->
-
-{% filename %}command-line{% endfilename %}
-
-    > dir
-     Directory of C:\Users\olasitarska
-     05/08/2014 07:28 PM <DIR> Applications 
-     05/08/2014 07:28 PM <DIR> Desktop
-     05/08/2014 07:28 PM <DIR> Downloads
-     05/08/2014 07:28 PM <DIR> Music ...
-    
-
-> Hinweis: Mit Powershell kannst du auch 'ls' verwenden, wie auf Linux oder Mac OS X. <!--endsec-->
-
 * * *
 
 ### Wechseln des Verzeichnisses
 
 Lass uns jetzt zu unserem Desktop-Verzeichnis wechseln:
-
-<!--sec data-title="Change current directory: OS X" data-id="OSX_move_to" data-collapse=true ces-->
-
-{% filename %}command-line{% endfilename %}
-
-    $ cd Desktop
-    
-
-<!--endsec-->
 
 <!--sec data-title="Change current directory: Linux" data-id="Linux_move_to" data-collapse=true ces-->
 
@@ -198,15 +131,6 @@ Wenn dein Linux-Benutzerkonto auf Deutsch eingestellt ist, kann es sein, dass au
 
 <!--endsec-->
 
-<!--sec data-title="Change current directory: Windows" data-id="windows_move_to" data-collapse=true ces-->
-
-{% filename %}command-line{% endfilename %}
-
-    > cd Desktop
-    
-
-<!--endsec-->
-
 Schau, ob das Wechseln des Verzeichnisses funktioniert hat:
 
 <!--sec data-title="Check if changed: OS X and Linux" data-id="OSX_Linux_pwd2" data-collapse=true ces-->
@@ -215,16 +139,6 @@ Schau, ob das Wechseln des Verzeichnisses funktioniert hat:
 
     $ pwd
     /Users/olasitarska/Desktop
-    
-
-<!--endsec-->
-
-<!--sec data-title="Check if changed: Windows" data-id="windows_cd2" data-collapse=true ces-->
-
-{% filename %}command-line{% endfilename %}
-
-    > cd
-    C:\Users\olasitarska\Desktop
     
 
 <!--endsec-->
@@ -244,15 +158,6 @@ Wie wär's damit, ein Übungsverzeichnis auf deinem Desktop zu erstellen? So kan
 {% filename %}command-line{% endfilename %}
 
     $ mkdir practice
-    
-
-<!--endsec-->
-
-<!--sec data-title="Create directory: Windows" data-id="windows_mkdir" data-collapse=true ces-->
-
-{% filename %}command-line{% endfilename %}
-
-    > mkdir practice
     
 
 <!--endsec-->
@@ -281,18 +186,6 @@ Eine kleine Herausforderung für dich: Erstelle in deinem neu erstellten `practi
 
 <!--endsec-->
 
-<!--sec data-title="Exercise solution: Windows" data-id="windows_test_dir" data-collapse=true ces-->
-
-{% filename %}command-line{% endfilename %}
-
-    > cd practice
-    > mkdir test
-    > dir
-    05/08/2014 07:28 PM <DIR>      test
-    
-
-<!--endsec-->
-
 Glückwunsch! :)
 
 * * *
@@ -312,15 +205,6 @@ Zuerst müssen wir zurück zum Desktop wechseln:
 
 <!--endsec-->
 
-<!--sec data-title="Clean up: Windows" data-id="windows_back" data-collapse=true ces-->
-
-{% filename %}command-line{% endfilename %}
-
-    > cd ..
-    
-
-<!--endsec-->
-
 Durch Verwendung von `..` mit dem `cd`-Kommando wechselst du von deinem aktuellen Verzeichnis zum übergeordneten Verzeichnis (dies ist das Verzeichnis, das das aktuelle Verzeichnis enthält).
 
 Schau nach, wo du gerade bist:
@@ -331,16 +215,6 @@ Schau nach, wo du gerade bist:
 
     $ pwd
     /Users/olasitarska/Desktop
-    
-
-<!--endsec-->
-
-<!--sec data-title="Check location: Windows" data-id="windows_cd3" data-collapse=true ces-->
-
-{% filename %}command-line{% endfilename %}
-
-    > cd
-    C:\Users\olasitarska\Desktop
     
 
 <!--endsec-->
@@ -358,16 +232,6 @@ Jetzt ist es an der Zeit, dein `practice`-Verzeichnis zu löschen:
 
 <!--endsec-->
 
-<!--sec data-title="Delete directory: Windows Command Prompt" data-id="windows_rmdir" data-collapse=true ces-->
-
-{% filename %}command-line{% endfilename %}
-
-    > rmdir /S practice
-    practice, Are you sure <Y/N>? Y
-    
-
-<!--endsec-->
-
 Geschafft! Lass uns schauen, ob es wirklich gelöscht ist:
 
 <!--sec data-title="Check deletion: OS X and Linux" data-id="OSX_Linux_ls2" data-collapse=true ces-->
@@ -375,15 +239,6 @@ Geschafft! Lass uns schauen, ob es wirklich gelöscht ist:
 {% filename %}command-line{% endfilename %}
 
     $ ls
-    
-
-<!--endsec-->
-
-<!--sec data-title="Check deletion: Windows" data-id="windows_dir2" data-collapse=true ces-->
-
-{% filename %}command-line{% endfilename %}
-
-    > dir
     
 
 <!--endsec-->
@@ -397,15 +252,6 @@ Das wärs fürs Erste. Du kannst nun beruhigt deine Konsole schließen. Lass es 
 {% filename %}command-line{% endfilename %}
 
     $ exit
-    
-
-<!--endsec-->
-
-<!--sec data-title="Exit: Windows" data-id="windows_exit" data-collapse=true ces-->
-
-{% filename %}command-line{% endfilename %}
-
-    > exit
     
 
 <!--endsec-->

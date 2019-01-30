@@ -12,8 +12,6 @@ Diese drei Orte werden für dich wichtig sein. Die Entwicklung und das Testen wi
 
 # Git
 
-> **Hinweis:** Falls du die Installationsschritte bereits durchgeführt hast, kannst du mit dem nächsten Abschnitt fortfahren und anfangen, dein Git-Repository zu erstellen.
-
 {% include "/deploy/install_git.md" %}
 
 ## Unser Git-Repository

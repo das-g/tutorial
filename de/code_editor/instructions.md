@@ -6,23 +6,25 @@ Unsere Vorschläge siehst du unten. Aber fühl dich ganz frei, deine Trainerin z
 
 Gedit ist ein kostenloser Open-Source-Editor. Es gibt ihn für alle Betriebssysteme.
 
-[Du kannst ihn hier herunterladen](https://wiki.gnome.org/Apps/Gedit#Download)
-
 ## Sublime Text 3
 
 Sublime Text ist ein sehr beliebter Editor, nutzbar für einen kostenlosen Testzeitraum. Er ist einfach zu installieren und zu verwenden, und er ist für alle Betriebssysteme verfügbar.
-
-[Du kannst ihn hier herunterladen](https://www.sublimetext.com/3)
 
 ## Atom
 
 Atom ist ein weiterer beliebter Editor. Er ist gratis, Open-Source und für Windows, OS X und Linux verfügbar. Atom wird von [GitHub](https://github.com/) entwickelt.
 
-[Du kannst ihn hier herunterladen](https://atom.io/)
+## Welchen Code-Editor soll ich wählen?
+
+Falls du nicht bereits eine Vorliebe hast,
+verwende Atom!
+Auf den Computern im PC-Labor lässt
+der sich über einen der Schnellstart-Knöpfe
+in der Leiste links starten.
 
 ## Warum installieren wir einen Code-Editor?
 
-Vielleicht wunderst du dich, warum wir so spezielle Code-Editor-Software installieren, statt einfach etwas wie Word oder Notepad zu benutzen.
+Vielleicht wunderst du dich, warum wir so spezielle Code-Editor-Software verwenden, statt einfach etwas wie Word oder Notepad zu benutzen.
 
 Erstens muss Code "plain text" (unformatierter Text) sein. Das Problem mit Programmen wie Word und Textedit ist, dass sie nicht "plain text" sondern "rich text" (mit Schriftarten und Formatierungen) produzieren und besondere Formate wie RTF (Rich Text Format) verwenden.
 

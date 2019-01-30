@@ -2,13 +2,9 @@
 
 # Einführung in Python
 
-> Ein Teil dieses Kapitels basiert auf dem Tutorial der Geek Girls Carrots (https://github.com/ggcarrots/django-carrots).
-
 Fangen wir an, schreiben wir Code!
 
 ## Der Python-Prompt
-
-> Für Leserinnen, die sich bereits mit Python auskennen: Dieser Teil befindet sich im [Python Basics: Integers, Strings, Lists, Variables and Errors](https://www.youtube.com/watch?v=MO63L4s-20U) Video.
 
 Um Python zu starten, musst du an die *Kommandozeile* deines Computers. Wie das geht, weißt du bereits - denn du hast es im Kapitel [Einführung in die Kommandozeile](../intro_to_command_line/README.md) gelernt.
 
@@ -363,8 +359,6 @@ Eine Liste aller Methoden, die du auf Listen anwenden kannst, findest du in der 
 
 ## Dictionaries
 
-> Für die Leser zu Hause: Dieses Kapitel wird im Video [Installing Python Code Editor](https://www.youtube.com/watch?v=ZX1CVvZLE6c) behandelt.
-
 Ein Wörterbuch (von nun an mit dem englischen Begriff 'Dictionary' bezeichnet) verhält sich ähnlich wie eine Liste, jedoch greifen wir auf die enthaltenen Objekte nicht mit einem Index, sondern mit einem Schlüssel zu (auf englisch 'key', und auch hier verwenden wir im weiteren den englischen Begriff). Ein 'key' kann ein String oder eine Zahl sein. Ein leeres Dictionary legen wir wie folgt an:
 
 {% filename %}command-line{% endfilename %}
@@ -475,8 +469,6 @@ Großartig! Inzwischen hast du schon einiges über Programmierung gelernt und di
 Schon gespannt auf den nächsten Teil? :)
 
 ## Vergleichen
-
-> Für die Leser zu Hause: Dieses Kapitel wird im Video [Python Basics: Comparisons](https://www.youtube.com/watch?v=7bzxqIKYgf4) behandelt.
 
 Ein großer Teil beim Programmieren besteht darin, Dinge zu vergleichen. Was lässt sich am besten vergleichen? Zahlen! Schauen wir uns mal an, wie das funktioniert:
 
@@ -589,8 +581,6 @@ False
 Glückwunsch! Booleans sind echt eine der coolsten Features beim Programmieren und du hast gerade gelernt, damit umzugehen!
 
 # Speicher es!
-
-> Für die Leser zu Hause: Dieses Kapitel wird im Video [Python Basics: Saving files and "If" statement](https://www.youtube.com/watch?v=dOAg6QVAxyk) behandelt.
 
 Bisher haben wir den Python-Code nur im Interpreter eingegeben, wodurch wir immer nur eine Zeile Code auf einmal ausführen konnten. Richtige Programme dagegen werden in Dateien gespeichert und, je nach Programmiersprache, durch einen **Interpreter** ausgeführt oder durch einen **Compiler** übersetzt. Unseren bisherigen Code haben wir dagegen im Python-**Interpreter** Zeile für Zeile eingegeben und einzeln ausgeführt. Für die nächsten Beispiele brauchen wir mehr als eine Zeile, daher werden wir nun:
 
@@ -843,8 +833,6 @@ Zeit für den letzten Teil dieses Kapitels!
 
 ## Deine eigenen Funktionen!
 
-> Für die Leser zu Hause: Dieses Kapitel wird im Video [Python Basics: Functions](https://www.youtube.com/watch?v=5owr-6suOl0) behandelt.
-
 Erinnerst du dich an Funktionen wie `len()`, die du in Python aufrufen kannst? Prima! Du wirst nun lernen, eigene Funktionen zu schreiben!
 
 Eine Funktion ist eine Folge von Anweisungen, die Python ausführen soll. Jede Funktions-Definition beginnt mit dem Schlüsselwort (engl. "Keyword") `def`, bekommt einen Namen und kann Argumente (manchmal auch "Parameter" genannt) haben. Probieren wir's aus! Ersetze den Code in der Datei **python_intro.py** mit dem folgenden:
@@ -976,8 +964,6 @@ Lass uns den Code aufrufen:
 Herzlichen Glückwunsch! Du hast gerade gelernt, wie du Funktionen schreibst! :)
 
 ## Schleifen
-
-> Für die Leser zu Hause: Dieses Kapitel wird im Video [Python Basics: For Loop](https://www.youtube.com/watch?v=aEA6Rc86HF0) behandelt.
 
 Dies ist bereits der letzte Teil. Das ging doch schnell, oder? :)
 
